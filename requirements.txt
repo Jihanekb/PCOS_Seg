@@ -1,5 +1,5 @@
-torch
-torchvision
+torch==latest+cpu
+torchvision==latest+cpu
 Flask
 Pillow
 numpy
