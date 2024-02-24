@@ -1,5 +1,5 @@
-torch==+cpu
-torchvision==+cpu
+torch==2.2.0+cpu
+torchvision==0.17.0+cpu
 Flask
 Pillow
 numpy
