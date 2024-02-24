@@ -1,5 +1,6 @@
-torch>=1.0.0,<=1.9.1+cpu
-torchvision>=0.1.8,<=0.10.1+cpu
+torch==2.2.0
+torchvision==0.17.0
+--index-url=https://download.pytorch.org/whl/cpu
 Flask
 Pillow
 numpy
