@@ -10,7 +10,7 @@ import io
 app = Flask(__name__)
 
 # Load the trained model
-model = YOLO("model/best.pt")
+model = YOLO("best.pt")
 confidence = 0.4
 
 
