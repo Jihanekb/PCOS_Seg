@@ -1,6 +1,7 @@
-torch==2.2.0
-torchvision==0.17.0
---index-url=https://download.pytorch.org/whl/cpu
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch==2.2.0+cpu
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torchvision==0.17.0+cpu
 Flask
 --index-url=https://pypi.org/simple/
 Pillow
@@ -8,3 +9,4 @@ numpy
 ultralytics
 werkzeug
 dill
+
