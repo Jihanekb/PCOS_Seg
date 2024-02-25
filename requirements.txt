@@ -42,3 +42,4 @@ ultralytics==8.1.18
 urllib3==1.26.13
 Werkzeug==3.0.1
 gunicorn
+flask_cors

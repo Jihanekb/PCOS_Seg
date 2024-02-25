@@ -5,9 +5,10 @@ from ultralytics import YOLO
 import werkzeug
 import numpy as np
 import io
-
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS on the Flask app
 
 # Load the trained model
 model = YOLO("best.pt")
