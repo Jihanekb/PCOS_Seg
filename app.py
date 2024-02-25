@@ -1,11 +1,12 @@
 import os
 from flask import Flask, request, jsonify, send_file
 from PIL import Image
+import base64
 from ultralytics import YOLO
-import werkzeug
 import numpy as np
 import io
 from flask_cors import CORS
+
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS on the Flask app
@@ -45,11 +46,11 @@ def index():
             
 
             # Convert image to bytes
-            img_byte_array = io.BytesIO()
-            detected_pil_img.save(img_byte_array, format='PNG')
-            img_byte_array = img_byte_array.getvalue()
+            buffered = io.BytesIO()
+            detected_pil_img.save(buffered, format='PNG')
+            img_str = base64.b64encode(buffered.getvalue()).decode()
 
-            return send_file(io.BytesIO(img_byte_array), mimetype='image/png')
+            return jsonify({'image': img_str})
 
             
     
