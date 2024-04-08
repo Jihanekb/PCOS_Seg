@@ -12,7 +12,7 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS on the Flask app
 
 # Load the trained model
-model = YOLO("best.pt")
+model = YOLO("best (1).pt")
 confidence = 0.4
 
 
